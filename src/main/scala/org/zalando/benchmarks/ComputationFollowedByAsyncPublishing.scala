@@ -13,8 +13,10 @@ object ComputationFollowedByAsyncPublishing {
   implicit val system = ActorSystem()
 
   val publishDuration = 15 millis
-  val numTasks = 20000
-  val numTokensToConsume = 5000000L // eats about 9-10 ms on my box
+  val numTasks = 200
+  // #val numTasks = 20000
+  val numTokensToConsume = 500L // eats about 9-10 ms on my box
+  // val numTokensToConsume = 5000000L // eats about 9-10 ms on my box
 
   val actors   = wire[Actors]
   val futures  = wire[Futures]
